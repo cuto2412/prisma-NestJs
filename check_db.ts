@@ -9,7 +9,7 @@ const prisma = new PrismaClient({ adapter });
 
 async function main() {
   try {
-    const categories = await prisma.user.findMany(); 
+    const categories = await prisma.product.findMany(); 
     console.log('Connection OK, categories:', categories);
   } catch (err) {
     console.error('Connection failed:', err);
