@@ -26,15 +26,19 @@ datasource db {
 //   author    User?    @relation(fields: [authorId], references: [id])
 //   authorId  Int?
 // }
+
 model Category {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   name      String
   products  Product[]
+  createdAt DateTime  @default(now())
 }
+
 model Product {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   name        String
-  price       Int
+  price       Float
   categoryId  Int
-  category    Category @relation(fields: [categoryId], references: [id])
+  category    Category  @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime  @default(now())
 }
