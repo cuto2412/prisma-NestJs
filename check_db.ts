@@ -15,66 +15,66 @@ async function main() {
 
   console.log(' Đã xóa toàn bộ dữ liệu cũ!');
 
-  console.log('Đang tạo danh mục...');
+  // console.log('Đang tạo danh mục...');
 
-  // Tạo danh mục + sản phẩm
-  const laptop = await prisma.category.create({
-    data: {
-      name: 'Laptop',
-      products: {
-        create: [
-          { name: 'MacBook Pro 16', price: 2500 },
-          { name: 'Dell XPS 15', price: 2000 },
-          { name: 'Asus ROG Strix', price: 2200 },
-        ],
-      },
-    },
-  });
+  // // Tạo danh mục + sản phẩm
+  // const laptop = await prisma.category.create({
+  //   data: {
+  //     name: 'Laptop',
+  //     products: {
+  //       create: [
+  //         { name: 'MacBook Pro 16', price: 2500 },
+  //         { name: 'Dell XPS 15', price: 2000 },
+  //         { name: 'Asus ROG Strix', price: 2200 },
+  //       ],
+  //     },
+  //   },
+  // });
 
-  const phone = await prisma.category.create({
-    data: {
-      name: 'Phone',
-      products: {
-        create: [
-          { name: 'iPhone 15 Pro Max', price: 1400 },
-          { name: 'Samsung Galaxy S24 Ultra', price: 1300 },
-          { name: 'Xiaomi 14', price: 900 },
-        ],
-      },
-    },
-  });
+  // const phone = await prisma.category.create({
+  //   data: {
+  //     name: 'Phone',
+  //     products: {
+  //       create: [
+  //         { name: 'iPhone 15 Pro Max', price: 1400 },
+  //         { name: 'Samsung Galaxy S24 Ultra', price: 1300 },
+  //         { name: 'Xiaomi 14', price: 900 },
+  //       ],
+  //     },
+  //   },
+  // });
 
-  const tablet = await prisma.category.create({
-    data: {
-      name: 'Tablet',
-      products: {
-        create: [
-          { name: 'iPad Pro 12.9"', price: 1700 },
-          { name: 'Samsung Tab S9 Ultra', price: 1500 },
-        ],
-      },
-    },
-  });
+  // const tablet = await prisma.category.create({
+  //   data: {
+  //     name: 'Tablet',
+  //     products: {
+  //       create: [
+  //         { name: 'iPad Pro 12.9"', price: 1700 },
+  //         { name: 'Samsung Tab S9 Ultra', price: 1500 },
+  //       ],
+  //     },
+  //   },
+  // });
 
-  console.log('Đã tạo dữ liệu mẫu!');
-  console.log({
-    laptop,
-    phone,
-    tablet,
-  });
+  // console.log('Đã tạo dữ liệu mẫu!');
+  // console.log({
+  //   laptop,
+  //   phone,
+  //   tablet,
+  // });
 
-  console.log('Seed hoàn tất!');
+  // console.log('Seed hoàn tất!');
 }
 
 // Chạy seed + đóng kết nối DB
 main()
-  .catch((e) => {
-    console.error('Lỗi seed:', e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+  // .catch((e) => {
+  //   console.error('Lỗi seed:', e);
+  //   process.exit(1);
+  // })
+  // .finally(async () => {
+  //   await prisma.$disconnect();
+  // });
 // async function main() {
 //   try {
 //     const categories = await prisma.product.findMany(); 
