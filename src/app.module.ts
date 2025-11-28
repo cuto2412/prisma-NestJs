@@ -5,9 +5,19 @@ import { CategoryModule } from './category/category.module';
 import { ProductModule } from './product/product.module';
 import { PrismaModule } from './prisma.module';
 
+// import { join } from 'path';
+// import hbs from 'hbs';
 @Module({
   imports: [CategoryModule, ProductModule, PrismaModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  // configure(consumer){
+  //   static configureViews(app: ExpressAdapter) {
+  //     app.set('views', join(__dirname, '..', 'views'));
+  //     app.set('view engine', 'hbs');
+  //   }
+
+  // }
+}

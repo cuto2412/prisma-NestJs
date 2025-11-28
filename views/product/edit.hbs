@@ -1,0 +1,16 @@
+{{> header title="Cập nhật sản phẩm" }}
+
+<form method="POST" action="/product/{{id}}/edit">
+  <label>Tên:</label>
+  <input name="name" value="{{name}}">
+
+  <label>Giá:</label>
+  <input type="number" name="price" value="{{price}}">
+
+  <label>Category ID:</label>
+  <input type="number" name="categoryId" value="{{categoryId}}">
+
+  <button type="submit">Cập nhật</button>
+</form>
+
+{{> footer }}

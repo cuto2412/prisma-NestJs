@@ -1,0 +1,16 @@
+{{> header title="Thêm sản phẩm" }}
+
+<form method="POST" action="/product/create">
+  <label>Tên:</label>
+  <input name="name">
+
+  <label>Giá:</label>
+  <input type="number" name="price">
+
+  <label>Category ID:</label>
+  <input type="number" name="categoryId">
+
+  <button type="submit">Tạo</button>
+</form>
+
+{{> footer }}
